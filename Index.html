@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impulso Downloader</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:#0b1020;color:white;font-family:Arial,sans-serif;display:grid;place-items:center;padding:20px}
+main{width:100%;max-width:480px;background:#151d31;padding:28px;border-radius:22px;box-shadow:0 15px 45px #0006}
+.logo{color:#65f0d0;font-size:14px;font-weight:bold;letter-spacing:3px}
+h1{font-size:34px;margin:14px 0}
+p{color:#bdc8dc;line-height:1.6}
+input,button{width:100%;padding:15px;border-radius:12px;font-size:16px;margin-top:12px}
+input{background:#0b1020;color:white;border:1px solid #46516a}
+button{background:#65f0d0;color:#07121c;border:0;font-weight:bold}
+.note{font-size:12px;margin-top:22px}
+</style>
+</head>
+<body>
+<main>
+<div class="logo">IMPULSO TOOLS</div>
+<h1>Descarga tus videos</h1>
+<p>Pega el enlace de un video público de TikTok para continuar.</p>
+<form id="form">
+<input id="url" type="url" placeholder="Pega aquí el enlace de TikTok" required>
+<button type="submit">Procesar video</button>
+</form>
+<p id="mensaje"></p>
+<p class="note">Descarga solamente videos propios o que tengas permiso para guardar.</p>
+</main>
+<script>
+document.getElementById("form").addEventListener("submit",function(e){
+e.preventDefault();
+document.getElementById("mensaje").textContent="La interfaz está lista. Falta conectar el servicio de descarga para que funcione.";
+});
+</script>
+</body>
+</html>
